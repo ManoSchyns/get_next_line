@@ -6,24 +6,32 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 07:35:13 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/22 09:05:00 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/23 08:17:24 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-#include <stdint.h>
-#include <unistd.h>
-#include <stdlib.h>
+# include <stdint.h>
+# include <unistd.h>
+# include <stdlib.h>
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 100
-#elif BUFFER_SIZE <= 0
-# error "Compilateur non conforme aux normes"
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 100
+# elif BUFFER_SIZE <= 0
+#  error "Compilateur non conforme aux normes"
+# endif
 
+typedef struct s_buffer
+{
+	char	buffer[BUFFER_SIZE];
+	int		fd;
+}	t_buffer;
 
 char	*get_next_line(int fd);
+char	*ft_memmove(char *dest, const char *src, int n);
+int		find_retour(char *buffer, int len);
+char	*ft_strjoin(char *buffer, int len, char *src, int found);
 
 #endif

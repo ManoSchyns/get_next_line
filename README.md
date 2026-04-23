@@ -8,18 +8,18 @@ The goal of this project is to create a function that will read from a file desc
 
 **Place the following at the top of your program:**
 
-*#include "get_next_line.h"*
+	 #include "get_next_line.h"
 
 **Then run your program by compiling the two .c files:**
 
-*cc -Wall -Wextra -Werror get_next_line_utils.c get_next_line.c program.c*
+	 cc -Wall -Wextra -Werror get_next_line_utils.c get_next_line.c program.c
 
 **Program is the name of your program.**
 
 **You can add a flag during compilation to determine the read buffer size yourself.**
 **That is, how many blocks of the file will be read.**
 
-*cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line_utils.c get_next_line.c program.c*
+	 cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line_utils.c get_next_line.c program.c
 
 **Here, the size is set to 42. You can change it as you wish.**
 

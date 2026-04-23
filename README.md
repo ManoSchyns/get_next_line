@@ -49,7 +49,8 @@ When a \n is found, or EOF is reached, the search stops. The algorithm appends t
 For subsequent reads, the remaining part of the buffer after the \n must be preserved. This means shifting the remaining characters in the buffer so that reading can continue correctly from where it stopped.
 
 Example :
-['a','b','c','\n','d','e', ...];
+
+	 ['a','b','c','\n','d','e', ...];
 
 -> We extract:
 
@@ -60,10 +61,12 @@ Example :
 So we shift the buffer:
 
 Before:
-['a','b','c','\n','d','e', ...];
+
+	 ['a','b','c','\n','d','e', ...];
 
 After: 
-['d','e', ...];
+
+	 ['d','e', ...];
 
 This allows the next function call to continue directly from e, since the position of the unread part of the buffer is stored.
 

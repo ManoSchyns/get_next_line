@@ -6,16 +6,12 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 07:36:57 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/23 07:43:52 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/23 09:04:47 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-//lire le fichier pour la buffer size
-//chercher le \n -> si \n on arrete tout
-//copie les caracteres de la sources dans la destination. Pour n caracteres
-//ici ca va principalement déplacé le buffer
 char	*ft_memmove(char *dest, const char *src, int n)
 {
 	int	i;
@@ -40,10 +36,6 @@ char	*ft_memmove(char *dest, const char *src, int n)
 	return (dest);
 }
 
-//cherche un retour a la ligne dans le buffer. 
-//partant du début jusqu'a la len
-//retourn l'index de ou se trouve le \n
-//retourn -1 si pas trouvé
 int	find_retour(char *buffer, int len)
 {
 	int	i;

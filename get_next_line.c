@@ -6,18 +6,12 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 07:37:02 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/23 08:26:24 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/23 09:04:34 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-//lit le fichier
-//ajoute au buffer à partir de l'indice indice. Jusqua bout de celui-ci
-// si erreur ou que le buffer et fichier est vide -> retourne -1
-//si on trouve un /n, -> on met dans dest, dest de base + buffer jusqu'a \name
-//return 1 on dit qu'on l'a trouvé.
-// si non, on ajoute tout le buffer dans la dest;
 int	read_buffer(t_buffer *data, int *start, char **dest, int *end)
 {
 	int	flag;
@@ -41,7 +35,6 @@ int	read_buffer(t_buffer *data, int *start, char **dest, int *end)
 	return (0);
 }
 
-//indice = indice jusqu'ou aller, c'est une len
 char	*read_line(t_buffer *data, int *start)
 {
 	char	*dest;

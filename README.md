@@ -68,7 +68,7 @@ After:
 
 	 ['d','e', ...];
 
-This allows the next function call to continue directly from e, since the position of the unread part of the buffer is stored.
+This allows the next function call to continue directly from d, since the position of the unread part of the buffer is stored.
 
 **-> Concretely, the algorithm:**
 

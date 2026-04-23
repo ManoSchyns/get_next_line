@@ -6,7 +6,7 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 07:37:02 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/23 09:04:34 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/23 09:30:23 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	*get_next_line(int fd)
 	return (read_line(&data, &size));
 }
 
-/*#include <stdio.h>
+/*-#include <stdio.h>
 #include <fcntl.h>
 #include <string.h>
 int main(void)

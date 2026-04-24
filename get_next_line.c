@@ -6,7 +6,7 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 07:37:02 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/23 09:30:23 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/24 11:43:55 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,22 +67,22 @@ char	*get_next_line(int fd)
 	static t_buffer	data;
 
 	data.fd = fd;
-	if (data.fd < 0)
+	if (data.fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	return (read_line(&data, &size));
 }
 
-/*-#include <stdio.h>
+/*#include <stdio.h>
 #include <fcntl.h>
 #include <string.h>
 int main(void)
 {
-    int fd = open("test.txt", O_RDONLY);
+    int fd = open("get_next_line.h", O_RDONLY);
 	//int fd = 1;
     char *buffer;
 
-    //if (fd < 0)
-    //    return (1);
+    if (fd < 0)
+        return (1);
     buffer = get_next_line(fd);
 	if (buffer == NULL)
 		printf("Erreur -> pas d'ouverture ?");

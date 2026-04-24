@@ -6,7 +6,7 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 07:35:13 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/23 08:17:24 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/24 11:39:46 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 100
-# elif BUFFER_SIZE <= 0
-#  error "Compilateur non conforme aux normes"
 # endif
 
 typedef struct s_buffer

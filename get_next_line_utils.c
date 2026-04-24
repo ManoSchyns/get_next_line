@@ -6,7 +6,7 @@
 /*   By: mschyns <mano.schyns@learner.42.tech>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 07:36:57 by mschyns           #+#    #+#             */
-/*   Updated: 2026/04/23 09:04:47 by mschyns          ###   ########.fr       */
+/*   Updated: 2026/04/24 11:36:53 by mschyns          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ static int	cpy_on(char *dest, char *buffer, int start, int len)
 char	*ft_strjoin(char *buffer, int len, char *src, int found)
 {
 	int		i;
-	int		j;
 	char	*dest;
 
 	i = 0;
